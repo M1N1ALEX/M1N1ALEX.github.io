@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para Sonia ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Poppins,sans-serif;background:linear-gradient(180deg,#ffecd2,#fcb69f,#f8a5a5);color:#fff;overflow-x:hidden}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+.hero h1,.card h2,#mensaje{font-family:"Dancing Script",cursive}
+.hero h1{font-size:5rem;animation:beat 2s infinite;text-shadow:0 0 20px rgba(255,255,255,.5)}
+@keyframes beat{50%{transform:scale(1.05)}}
+.hero p{font-size:1.4rem;max-width:800px}
+#contador{margin-top:30px;background:rgba(255,255,255,.15);padding:18px 30px;border-radius:18px}
+.card{max-width:1000px;margin:35px auto;padding:35px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:24px}
+.card h2{font-size:3rem;text-align:center;margin-bottom:20px}
+.card p{line-height:1.9}
+.paper{background:#fff8f1;color:#6b3c30;border-radius:20px;padding:35px}
+.paper p{font-family:"Dancing Script",cursive;font-size:2rem;margin-bottom:18px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.gallery img{width:100%;height:320px;object-fit:cover;border-radius:16px}
+button{padding:16px 34px;border:none;border-radius:999px;background:#ff4d6d;color:#fff;font-size:1.1rem;cursor:pointer}
+#mensaje{display:none;font-size:2.2rem;margin-top:20px;text-align:center}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:up linear forwards}
+@keyframes up{to{transform:translateY(-120vh);opacity:0}}
+footer{text-align:center;padding:30px}
+</style></head><body>
+<div class="hero"><h1>Sonia ❤️ Alejandro</h1><p>Hay personas que llegan por casualidad... y otras porque el destino jamás permitió que se perdieran.</p><div id="contador"></div></div>
+<div class="card"><h2>El Hilo Rojo del Destino 🧵</h2><p>La leyenda japonesa dice que dos personas destinadas a encontrarse están unidas por un hilo rojo invisible. Puede enredarse, puede estirarse, pero jamás romperse. Me gusta pensar que nuestro hilo siempre estuvo ahí.</p></div>
+<div class="card"><h2>Una carta para ti 💜</h2><div class="paper">
+<p>Hoy quiero decir algo que a veces sentimos, pero no siempre expresamos.</p>
+<p>Quiero agradecerte por estar conmigo, por caminar a mi lado incluso cuando el camino no ha sido fácil. Porque contigo he aprendido que el amor no es solo lo bonito, sino también la valentía de seguir adelante juntos.</p>
+<p>Contigo he descubierto sensaciones que no sabía que podían existir: tranquilidad, alegría, apoyo, y esa fuerza que aparece cuando sé que estás conmigo.</p>
+<p>Todo lo que me haces sentir es increíble, y cada día me recuerdas que elegimos estar juntos, que elegimos cuidarnos, que elegimos querernos.</p>
+<p>Hemos pasado por momentos buenos y otros que nos han puesto a prueba, pero nuestro amor siempre ha demostrado ser más fuerte que cualquier dificultad.</p>
+<p>Gracias por ser tú. Gracias por lo que somos cuando estamos juntos. Gracias por hacer que este amor sea tan grande que nada puede con él.</p>
+<p style="text-align:center;font-size:2.5rem;color:#8e3b6d">Te amo Sonia y siempre lo haré 💜</p>
+<p style="text-align:right">Alejandro ❤️</p>
+</div></div>
+
+<div class="card">
+<h2 style="font-family:'Dancing Script',cursive;">Si alguien me preguntara por ti... 🌸</h2>
+<div class="paper">
+<p>Les diría que eres esa persona que consigue hacerme sentir en paz.</p>
+<p>Que haces que cualquier lugar sea especial y que incluso los días difíciles son más fáciles si estoy contigo.</p>
+<p>Si pudiera pedir un solo deseo, no pediría una vida perfecta; pediría seguir compartiendo cada día a tu lado.</p>
+<p>Prometo hacerte sonreír siempre que pueda, escucharte, apoyarte y elegirte cada día.</p>
+<p>Y si existieran mil vidas... en las mil volvería a buscarte, volvería a enamorarme de ti y volvería a elegirte.</p>
+<p>Porque lo más bonito no fue encontrarte, sino descubrir que contigo me siento en casa.</p>
+<p style="text-align:center;font-size:2.2rem;color:#8e3b6d;">Eres mi presente, mi tranquilidad y el futuro que quiero construir. 💜</p>
+</div>
+</div>
+
+<div style="text-align:center;padding:40px"><button onclick="mensaje.style.display='block'">Pulsa aquí ❤️</button><div id="mensaje">Te elegiría una y mil veces.<br>Gracias por existir.<br>Te quiero muchísimo, Sonia. ❤️</div></div>
+<footer>Hecho con todo el cariño del mundo por Alejandro ❤️</footer>
+<script>
+const inicio=new Date("2026-05-27T00:00:00");
+function u(){let s=((new Date()-inicio)/1000)|0,d=(s/86400)|0;s%=86400;let h=(s/3600)|0;s%=3600;let m=(s/60)|0;s%=60;contador.innerHTML=`❤️<br>Llevamos juntos<br><b>${d}</b> días ${h} horas ${m} minutos ${s} segundos`;}
+setInterval(u,1000);u();
+setInterval(()=>{let e=document.createElement('div');e.className='heart';e.textContent=Math.random()>.5?'❤️':'🌸';e.style.left=Math.random()*100+'vw';e.style.animationDuration=(4+Math.random()*4)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),8000);},500);
+</script></body></html>
